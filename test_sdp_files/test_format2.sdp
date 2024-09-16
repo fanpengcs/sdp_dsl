@@ -1,0 +1,9 @@
+#include "test_format.sdp"
+
+module MTTD
+{
+    struct B
+    {
+        0 optional B a;
+    };
+};

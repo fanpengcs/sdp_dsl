@@ -1,0 +1,40 @@
+module MTTDProto 
+{
+    struct B{ 
+
+
+
+    };struct F{};
+};
+module MTTD
+{
+
+    struct A
+    {
+        0 optional map<string,MTTDProto::B> b;
+        1 optional map<string, map<string,string> > c;
+        2 optional vector<vector< vector<string> > > d;
+    };
+    enum RoleProfileInfoFlagType
+	{
+        /*asdf
+asdfasdf
+                        asdfasdf
+        */
+		// 废弃字段不删除,最多64个
+		RoleProfileInfoFlagType_Min				= 0,
+		RoleProfileInfoFlagType_Base			= 0x1,
+		RoleProfileInfoFlagType_Online			= 2,
+		RoleProfileInfoFlagType_SP				= 3,
+		RoleProfileInfoFlagType_SP				,
+		RoleProfileInfoFlagType_NewOnline		= 4,
+		RoleProfileInfoFlagType_Progress		= 5, // 战役 通天塔 异界塔进度
+		RoleProfileInfoFlagType_AllianceBoss	= 6, // 公会boss
+		RoleProfileInfoFlagType_SeasonLine		= 7, // 赛季
+
+        // warning 警告，如果有默认字段，需要在profile里填充默认字段,
+        // 新增字段，profile缺失不会再从game主动拉取
+		RoleProfileInfoFlagType_Max,//adsfsafd
+		RoleProfileInfoFlagType_Max2222,//adsfsafd
+	};
+};

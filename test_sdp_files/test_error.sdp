@@ -1,0 +1,14 @@
+module MTTD
+{
+    struct Player
+    {
+    };
+
+    struct Game
+    {
+        0 optional string a;
+        0 optional Player a;
+        0 optional Player a;
+        0 optional Player a;
+    };
+};

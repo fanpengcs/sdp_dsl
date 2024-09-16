@@ -1,0 +1,9 @@
+#include "a.sdp"
+
+module MTTD
+{
+
+struct B
+{
+};
+};

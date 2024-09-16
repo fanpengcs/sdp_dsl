@@ -1,0 +1,12 @@
+module MTTD
+{
+    struct ABC
+    {
+        0 optional string a;
+    };
+
+    struct C
+    {
+        0 optional b
+    }
+};

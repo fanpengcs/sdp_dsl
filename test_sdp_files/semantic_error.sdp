@@ -1,0 +1,49 @@
+module MTTD
+{
+    // SemanticError_RepeatedStructDefine
+    struct A{};
+    struct A{};
+
+    // SemanticError_RepeatedEnumDefine
+    enum B {};
+    enum B {};
+
+    // SemanticError_RepeatedServiceDefine
+    interface C{};
+    interface C{};
+
+    struct C
+    {
+        // SemanticError_RepeatedStructFieldNumberDefine
+        0 optional string a1;
+        0 optional string a2;
+
+        // SemanticError_RepeatedStructFieldNameDefine
+        1 optional string a3;
+        2 optional string a3;
+    };
+
+    enum D
+    {
+        // SemanticError_RepeatedEnumFieldNumberDefine
+        D_1 = 1,
+        D_2 = 1,
+
+        // SemanticError_RepeatedEnumFieldNameDefine
+        D_3 = 2,
+        D_3 = 3,
+    };
+
+    interface E
+    {
+        // SemanticError_RepeatedServiceMethodDefine
+        void hello();
+        string hello();
+    };
+
+    struct F
+    {
+        // SemanticError_TypeNotDefine
+        0 optional XXX a;
+    };
+};
